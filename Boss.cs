@@ -1,11 +1,14 @@
 using System;
 
 namespace more_tests_and_ninjas {
-    class Boss : DodgingTarget {
+    class Boss : DodgingTarget,MoreLives {
 
         bool isDodging = false;
         bool dead = false;
-        int lives = 3;
+        int lives = 1;
+        public void LivesQuantity(int lives){
+            this.lives = lives;
+        }
         public void Shot() {
             lives -= 1;
             if (lives == 0){

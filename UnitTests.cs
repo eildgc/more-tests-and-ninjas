@@ -138,6 +138,7 @@ namespace more_tests_and_ninjas {
                 john.Equip(revolver);
 
                 Boss boss1 = new Boss();
+                boss1.LivesQuantity(3);
 
                 john.Reload();
                 john.Shoot(boss1);
