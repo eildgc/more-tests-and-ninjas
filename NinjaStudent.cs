@@ -31,15 +31,11 @@ class NinjaStudent : DodgingTarget {
             Random r = new Random();
             int dodgingOpportunity = (int)Math.Floor(r.NextDouble() * 2);
             if (dodgingOpportunity == 2) {
-                this.Dodge();
-                Console.WriteLine("Ninja Student dodged!");
+                this.isDodging = true;
             } else {
-                this.Miss();
-                Console.WriteLine("Ninja Student was hit!");
+                this.isDodging = false;
             }
-
         }
-
         public void MissingDodging2(){
             if (this.isDodging = true){
                 this.isDodging = false;

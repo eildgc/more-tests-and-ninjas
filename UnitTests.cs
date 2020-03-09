@@ -97,7 +97,7 @@ namespace more_tests_and_ninjas {
                 john.Reload();
                 noobStudent.Dodge();
                 john.Shoot(noobStudent);
-                noobStudent.MissingDodging2();
+                noobStudent.MissingDodging();
                 Assert.That(noobStudent.IsDead(), Is.EqualTo(false));
 
                 john.Shoot(noobStudent);
