@@ -1,6 +1,6 @@
 using System;
 
-namespace gun_master_9000 {
+namespace more_tests_and_ninjas {
     class Minigun : Gun {
         //Gun es la clase padre y Minigun es el children
         public Minigun(string name, int capacity) : base(name, capacity) {

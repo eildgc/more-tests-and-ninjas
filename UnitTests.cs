@@ -2,7 +2,7 @@ using System;
 using NUnit.Framework;
 using System.Collections.Generic;
 
-namespace gun_master_9000 {
+namespace more_tests_and_ninjas {
     [TestFixture]
     class UnitTests{
 

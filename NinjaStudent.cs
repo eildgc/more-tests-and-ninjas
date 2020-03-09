@@ -1,9 +1,7 @@
 using System;
 
 namespace more_tests_and_ninjas {
-    //Bug es un target
-    //La itnerface en Target pone las reglas
-    class Bug : Target {
+class NinjaStudent : Target {
 
         private bool dead = false;
         public void Shot() {
