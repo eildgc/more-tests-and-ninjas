@@ -106,5 +106,21 @@ namespace more_tests_and_ninjas {
                 Assert.That(noobStudent.IsDead(), Is.EqualTo(true));
 
             }
+
+            [Test, Description("Try to shoot a dodging Ninja Master")]
+            public void DodgingNinjaMasterTest(){
+                Character john = new Character("John");
+                Gun revolver = new Gun("Revolver", 6);
+                john.Equip(revolver);
+
+                NinjaMaster expertNinja = new NinjaMaster();
+
+                john.Reload();
+                expertNinja.Dodge();
+                john.Shoot(expertNinja);
+                expertNinja.Dodge();
+                Assert.That(expertNinja.IsDead(), Is.EqualTo(false));
+
+            }
     }
 }
