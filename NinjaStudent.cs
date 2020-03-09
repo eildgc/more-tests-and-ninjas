@@ -9,7 +9,7 @@ class NinjaStudent : DodgingTarget {
         public void Shot() {
             if (this.isDodging) {
                 this.Miss();
-            }else {
+            } else {
                 this.Hit(); 
             }
         }
@@ -23,21 +23,19 @@ class NinjaStudent : DodgingTarget {
             this.dead = true;
         }
         public void Miss() {
-            this.isDodging  = false;
-
         }
 
         public void MissingDodging(){
             Random r = new Random();
             int dodgingOpportunity = (int)Math.Floor(r.NextDouble() * 2);
-            if (dodgingOpportunity == 2) {
+            if (dodgingOpportunity == 1) {
                 this.isDodging = true;
             } else {
                 this.isDodging = false;
             }
         }
         public void MissingDodging2(){
-            if (this.isDodging = true){
+            if (this.isDodging == true){
                 this.isDodging = false;
             } else {
                 this.isDodging = true;

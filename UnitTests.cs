@@ -95,13 +95,12 @@ namespace more_tests_and_ninjas {
                 NinjaStudent noobStudent = new NinjaStudent();
 
                 john.Reload();
-                noobStudent.Dodge();
+                noobStudent.MissingDodging2();
                 john.Shoot(noobStudent);
-                noobStudent.MissingDodging();
                 Assert.That(noobStudent.IsDead(), Is.EqualTo(false));
 
-                john.Shoot(noobStudent);
                 noobStudent.MissingDodging2();
+                john.Shoot(noobStudent);
                 Assert.That(noobStudent.IsDead(), Is.EqualTo(true));
 
             }
@@ -115,9 +114,40 @@ namespace more_tests_and_ninjas {
                 NinjaMaster expertNinja = new NinjaMaster();
 
                 john.Reload();
-                expertNinja.Dodge();
                 john.Shoot(expertNinja);
                 Assert.That(expertNinja.IsDead(), Is.EqualTo(false));
+
+                john.Shoot(expertNinja);
+                Assert.That(expertNinja.IsDead(), Is.EqualTo(false));
+
+                john.Shoot(expertNinja);
+                Assert.That(expertNinja.IsDead(), Is.EqualTo(false));
+
+                john.Shoot(expertNinja);
+                Assert.That(expertNinja.IsDead(), Is.EqualTo(false));
+
+                john.Shoot(expertNinja);
+                Assert.That(expertNinja.IsDead(), Is.EqualTo(false));
+
+            }
+
+            [Test, Description("Try to shoot a dodging Ninja Student")]
+            public void BossTest(){
+                Character john = new Character("John");
+                Gun revolver = new Gun("Revolver", 6);
+                john.Equip(revolver);
+
+                Boss boss1 = new Boss();
+
+                john.Reload();
+                john.Shoot(boss1);
+                Assert.That(boss1.IsDead(), Is.EqualTo(false));
+
+                john.Shoot(boss1);
+                Assert.That(boss1.IsDead(), Is.EqualTo(false));
+
+                john.Shoot(boss1);
+                Assert.That(boss1.IsDead(), Is.EqualTo(true));
 
             }
     }
