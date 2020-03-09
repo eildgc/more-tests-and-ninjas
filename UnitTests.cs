@@ -85,5 +85,26 @@ namespace more_tests_and_ninjas {
                 Assert.That(theOne.IsDead(), Is.EqualTo(true));
 
             }
+
+            [Test, Description("Try to shoot a dodging Ninja Student")]
+            public void DodgingNinjaStudentTest(){
+                Character john = new Character("John");
+                Gun revolver = new Gun("Revolver", 6);
+                john.Equip(revolver);
+
+                NinjaStudent noobStudent = new NinjaStudent();
+
+                john.Reload();
+                noobStudent.Dodge();
+                john.Shoot(noobStudent);
+                noobStudent.MissingDodging();
+                Assert.That(noobStudent.IsDead(), Is.EqualTo(false));
+
+                john.Reload();
+                john.Shoot(noobStudent);
+                noobStudent.MissingDodging();
+                Assert.That(noobStudent.IsDead(), Is.EqualTo(true));
+
+            }
     }
 }
