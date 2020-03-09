@@ -15,6 +15,10 @@ class NinjaMaster : DodgingTarget {
         public void Dodge() {
             this.isDodging = true;
         }
+
+        public void Hit() {
+            this.isDodging = true;
+        }
         public void Miss() {
             this.isDodging  = true;
 
