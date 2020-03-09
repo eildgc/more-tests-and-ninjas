@@ -97,12 +97,11 @@ namespace more_tests_and_ninjas {
                 john.Reload();
                 noobStudent.Dodge();
                 john.Shoot(noobStudent);
-                noobStudent.MissingDodging();
+                noobStudent.MissingDodging2();
                 Assert.That(noobStudent.IsDead(), Is.EqualTo(false));
 
-                john.Reload();
                 john.Shoot(noobStudent);
-                noobStudent.MissingDodging();
+                noobStudent.MissingDodging2();
                 Assert.That(noobStudent.IsDead(), Is.EqualTo(true));
 
             }
@@ -118,7 +117,6 @@ namespace more_tests_and_ninjas {
                 john.Reload();
                 expertNinja.Dodge();
                 john.Shoot(expertNinja);
-                expertNinja.Dodge();
                 Assert.That(expertNinja.IsDead(), Is.EqualTo(false));
 
             }

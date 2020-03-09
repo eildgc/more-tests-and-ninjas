@@ -39,5 +39,13 @@ class NinjaStudent : DodgingTarget {
             }
 
         }
+
+        public void MissingDodging2(){
+            if (this.isDodging = true){
+                this.isDodging = false;
+            } else {
+                this.isDodging = true;
+            }
+        }
     }
 }
